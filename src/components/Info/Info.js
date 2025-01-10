@@ -27,7 +27,7 @@ export const Info = () => {
             setLoading(true);
             try {
                 // Получаем список заказов
-                const ordersResponse = await fetch('http://45.141.102.169:3001/api/orders', {
+                const ordersResponse = await fetch('https://45.141.102.169:3003/api/orders', {
                     headers: {
                         'x-api-key': API_KEY
                     }
@@ -50,7 +50,7 @@ export const Info = () => {
                     }
 
                     // Получаем детали сертификата
-                    const certificatesResponse = await fetch('http://45.141.102.169:3001/api/certificates', {
+                    const certificatesResponse = await fetch('https://45.141.102.169:3003/api/certificates', {
                         headers: {
                             'x-api-key': API_KEY
                         }
@@ -118,7 +118,7 @@ export const Info = () => {
     const handleSubmit = async () => {
         const API_KEY = '011ba11bdcad4fa396660c2ec447ef14';
         try {
-            const response = await fetch('http://45.141.102.169:3001/api/orders', {
+            const response = await fetch('https://45.141.102.169:3003/api/orders', {
                 method: 'POST',
                 headers: {
                     'x-api-key': API_KEY,

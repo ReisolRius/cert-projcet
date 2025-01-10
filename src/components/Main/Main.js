@@ -15,7 +15,7 @@ export const Main = () => {
 
     useEffect(() => {
         const API_KEY = '011ba11bdcad4fa396660c2ec447ef14';
-        const API_URL = 'http://45.141.102.169:3001/api/certificates';
+        const API_URL = 'https://45.141.102.169:3003/api/certificates';
 
         const OSGetGoodList = async () => {
             setLoading(true);
@@ -41,7 +41,7 @@ export const Main = () => {
                 setProducts(data);
 
                 // Проверяем сохраненные заказы в API
-                const ordersResponse = await fetch('http://45.141.102.169:3001/api/orders', {
+                const ordersResponse = await fetch('https://45.141.102.169:3003/api/orders', {
                     method: 'GET',
                     headers: {
                         'Authorization': 'Basic ' + btoa(`${username}:${password}`),
@@ -87,7 +87,7 @@ export const Main = () => {
 
             try {
                 const API_KEY = '011ba11bdcad4fa396660c2ec447ef14';
-                const response = await fetch('http://45.141.102.169:3001/api/orders', {
+                const response = await fetch('https://45.141.102.169:3003/api/orders', {
                     method: 'POST',
                     headers: {
                         'Authorization': 'Basic ' + btoa(`${username}:${password}`),
